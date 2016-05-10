@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Introduction to Webpack - JWorks - Jan De Wilde</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/ordina.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <script src="js/head.min.js"></script>
+    <!--Add support for earlier versions of Internet Explorer -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Automation &amp; Tooling</h1>
+                <h3>Kickoff</h3>
+                <img src="img/jworks-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+            </section>
+
+            <section>
+                <h3>Competence Center</h3>
+                <h2>Automation &amp; Tooling</h2>
+                <p>
+                <br/>Vierbergen Tim  -  tim.vierbergen@ordina.be
+                <br/>Verelst Tom  -  tom.verelst@ordina.be
+                </p>
+            </section>
+
+            <!-- **********
+                EDIT FROM HERE
+            ********** -->
+            <section>
+                <h2>Topics</h2>
+                <p>Introduction</p>
+                <p>Goal</p>
+                <p>More then CI</p>
+                <p>Proposals? </p>
+            </section>
+
+            <section>
+                <section data-background="#DF6F0C">
+                    <h2 style="color: #fff;">Introduction</h2>
+                </section>
+
+                <section>
+                    <h2>History</h2>
+                    <ul>
+                        <li>Talks about testing</li>
+                        <li>To automated testing</li>
+                        <li>To autodeploys</li>
+                        <li>To continuous What?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>To continuous What?</h2>
+                    <ul>
+                        <li>Continuous Integration</li>
+                        <li>Continuous Delivery</li>
+                        <li>Continuous Deployment</li>
+                        <li>Agile?</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+
+                <section data-background="#DF6F0C">
+                    <h2 style="color: #fff;">Goal</h2>
+                </section>
+
+                <section style="text-align: left;" data-background="img/CD1.jpeg">
+                    <h2>&nbsp;</h2>
+                </section>
+                <section style="text-align: left;" data-background="img/CD2.png">
+                    <h2>&nbsp;</h2>
+                </section>
+                <section style="text-align: left;" data-background="img/CD3.jpg">
+                    <h2>&nbsp;</h2>
+                </section>
+
+                <section>
+                    <h2><code>Pipeline</code></h2>
+                    <p>On-premise / cloud</p>
+                    <ul>
+                        <li>Testing</li>
+                        <li>Staging &amp; autodeploys</li>
+                        <li>Reporting with agile feedback</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2><code>Tools</code></h2>
+                    <ul>
+                        <li>Testing (and build)</li>
+                        <li>Server / Cloud</li>
+                        <li>Containers &amp; autodeploys</li>
+                        <li>Reposting tools</li>
+                    </ul>
+                </section>
+
+            </section>
+
+            <section>
+                <section data-background="#DF6F0C">
+                    <h2 style="color: #fff;">More then CI</h2>
+                </section>
+
+                <section>
+                    <h2>Other needs ?</h2>
+                    <p>Unix/bash scripting, Git,...</p>
+                    <p>Proposals</p>
+                </section>
+            </section>
+
+            <section>
+                <section data-background="#DF6F0C">
+                    <h2 style="color: #fff;">Proposals</h2>
+                </section>
+
+                <section>
+                    <h2>Other needs ?</h2>
+                    <p>Unix/bash scripting, Git,...</p>
+                    <p>Proposals</p>
+                </section>
+            </section>
+
+            <!-- **********
+                DO NOT REMOVE
+            ********** -->
+            <section style="text-align: left;">
+                <h2>Thanks for attending!</h2>
+                <p class="fragment">;-)</p>
+            </section>
+
+            <section style="text-align: left;" data-background="img/jworks-wallpaper-3.jpg">
+                <h2>&nbsp;</h2>
+            </section>
+        </div>
+    </div>
+    <script src="js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            transition: 'convex',
+            center: true,
+            dependencies: [
+                // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                {
+                    src: 'lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                // Interpret Markdown in <section> elements
+                {
+                    src: 'plugin/markdown/marked.js',
+                    condition: function() {
+                        return !!document.querySelector( '[data-markdown]' );
+                    }
+                },
+                {
+                    src: 'plugin/markdown/markdown.js',
+                    condition: function() {
+                        return !!document.querySelector( '[data-markdown]' );
+                    }
+                },
+                // Syntax highlight for <code> elements
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                // Zoom in and out with Alt+click
+                {
+                    src: 'plugin/zoom-js/zoom.js',
+                    async: true
+                },
+                // Speaker notes
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                }
+        ]
+        });
+    </script>
+</body>
+
+</html>
